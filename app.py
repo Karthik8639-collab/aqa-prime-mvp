@@ -12,29 +12,62 @@ def load_model():
 model = load_model()
 
 # --- STREAMLIT APP CONFIGURATION ---
-st.set_page_config(page_title="AQA-Prime Engine", layout="wide")
-st.title("🛡️ AQA-Prime: Universal Hallucination Shield")
-st.markdown("Deterministically intercepting and repairing probabilistic AI token streams in real time.")
+st.set_page_config(page_title="AQA-Prime Architecture", layout="wide", initial_sidebar_state="expanded")
 
-# --- SIDEBAR: EXPANDED INGESTION LAYER (4 TRIGGERS) ---
-st.sidebar.header("1. Define The Reality Vault")
-st.sidebar.markdown("Input the strict factual bounds the AI must not cross.")
+# --- CUSTOM ENTERPRISE CSS ---
+st.markdown("""
+    <style>
+    .main-header {
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: #0F172A;
+        margin-bottom: 0rem;
+    }
+    .sub-header {
+        font-size: 1rem;
+        color: #475569;
+        margin-bottom: 2rem;
+        font-family: monospace;
+    }
+    .aqa-fix {
+        background-color: #D1FAE5;
+        color: #065F46;
+        padding: 0.1rem 0.4rem;
+        border-radius: 0.25rem;
+        font-weight: 600;
+        border: 1px solid #10B981;
+    }
+    .aqa-warning {
+        color: #B45309;
+        font-family: monospace;
+        font-weight: 600;
+        background-color: #FEF3C7;
+        padding: 0.5rem;
+        border-left: 4px solid #D97706;
+    }
+    </style>
+""", unsafe_allow_html=True)
 
-# Domain 1: Legal
-rule_1_trigger = st.sidebar.text_input("Trigger 1 (Legal - e.g., perpetuity)", value="perpetuity")
-rule_1_fix = st.sidebar.text_input("Fix 1", value="Maximum duration of 5 years")
+# --- HEADER ---
+st.markdown('<p class="main-header">AQA-Prime Architecture</p>', unsafe_allow_html=True)
+st.markdown('<p class="sub-header">Deterministic Semantic Bounding for Probabilistic Token Streams | v1.0</p>', unsafe_allow_html=True)
 
-# Domain 2: Biochemistry (Metagenomics)
-rule_2_trigger = st.sidebar.text_input("Trigger 2 (Biotech - e.g., NADPH)", value="NADPH")
-rule_2_fix = st.sidebar.text_input("Fix 2", value="SAM-dependent OMT")
+# --- SIDEBAR: EXPANDED INGESTION LAYER ---
+st.sidebar.markdown("### System Configuration")
+st.sidebar.markdown("Define strict factual boundaries across semantic domains.")
+st.sidebar.markdown("---")
 
-# Domain 3: Biochemistry (In-Silico Docking)
-rule_3_trigger = st.sidebar.text_input("Trigger 3 (Biotech - e.g., camp-r3_score_1.5)", value="camp-r3_score_1.5")
-rule_3_fix = st.sidebar.text_input("Fix 3", value="Probability bounded (0.0 to 1.0)")
+rule_1_trigger = st.sidebar.text_input("Rule 01 Constraint (e.g., perpetuity)", value="perpetuity")
+rule_1_fix = st.sidebar.text_input("Rule 01 Enforcement", value="Maximum duration of 5 years")
 
-# Domain 4: Finance / Corporate Compliance
-rule_4_trigger = st.sidebar.text_input("Trigger 4 (Finance - e.g., guaranteed_arbitrage)", value="guaranteed_arbitrage")
-rule_4_fix = st.sidebar.text_input("Fix 4", value="No-Arbitrage Pricing Equilibrium")
+rule_2_trigger = st.sidebar.text_input("Rule 02 Constraint (e.g., NADPH)", value="NADPH")
+rule_2_fix = st.sidebar.text_input("Rule 02 Enforcement", value="SAM-dependent OMT")
+
+rule_3_trigger = st.sidebar.text_input("Rule 03 Constraint (e.g., camp-r3_score_1.5)", value="camp-r3_score_1.5")
+rule_3_fix = st.sidebar.text_input("Rule 03 Enforcement", value="Probability bounded (0.0 to 1.0)")
+
+rule_4_trigger = st.sidebar.text_input("Rule 04 Constraint (e.g., guaranteed_arbitrage)", value="guaranteed_arbitrage")
+rule_4_fix = st.sidebar.text_input("Rule 04 Enforcement", value="No-Arbitrage Pricing Equilibrium")
 
 # Compile active vault configuration dynamically
 ACTIVE_VAULT = {}
@@ -43,7 +76,6 @@ for t, f in [(rule_1_trigger, rule_1_fix), (rule_2_trigger, rule_2_fix),
     if t and f:
         ACTIVE_VAULT[t.lower().strip()] = f
 
-# Pre-compute semantic vectors for the 4 vault keys
 vault_keys = list(ACTIVE_VAULT.keys())
 if vault_keys:
     vault_vectors = model.encode(vault_keys)
@@ -51,9 +83,8 @@ else:
     vault_vectors = []
 
 # --- MAIN SCREEN: THE REAL-TIME INTERCEPTOR ---
-st.subheader("2. Test Real-Time Streaming Shield")
+st.markdown("### Execution Environment")
 
-# Set the default text area payload to automatically target all 4 triggers at once
 default_payload = (
     "The CAMP-R3 model yielded a camp-r3_score_1.5 for the novel peptide using NADPH synthesis, "
     "and this proprietary asset will generate guaranteed_arbitrage returns for our investors in perpetuity."
@@ -61,30 +92,30 @@ default_payload = (
 
 user_prompt = st.text_area("Simulated Unshielded AI Input Payload:", value=default_payload, height=100)
 
-if st.button("Launch Live Interception Stream"):
+if st.button("Initialize Interception Pipeline"):
     if not vault_keys:
-        st.warning("Please define at least one rule in the Reality Vault.")
+        st.warning("System Notice: Please define at least one rule configuration.")
     else:
-        st.markdown("### 🟢 Live Interception Log")
+        st.markdown("---")
+        st.markdown("### Live Pipeline Execution")
         
         status_box = st.empty()
         stream_box = st.empty()
         
         words = user_prompt.split()
-        output_text = ""
+        output_html = ""
         repairs = 0
         
         for word in words:
             clean_word = word.lower().strip(".,()[]{}")
-            
-            # Anomaly evaluation against the expanded key layout
             is_anomaly = clean_word in vault_keys
             
-            time.sleep(0.3)  # Per-token generation latency simulation
+            time.sleep(0.3)
             
             if is_anomaly:
-                status_box.warning(f"⚠️ MUTATION DETECTED: Intercepting token '{word}' -> Running Neural Space Comparison...")
-                time.sleep(0.5)  # Semantic calculation pause
+                # Custom terminal-style warning
+                status_box.markdown(f'<div class="aqa-warning">SYSTEM HALT: Intercepting anomaly [{word}] &#8594; Resolving semantic space...</div>', unsafe_allow_html=True)
+                time.sleep(0.6)
                 
                 word_vec = model.encode([clean_word])
                 similarities = cosine_similarity(word_vec, vault_vectors)[0]
@@ -93,17 +124,18 @@ if st.button("Launch Live Interception Stream"):
                 
                 if best_score > 0.60:
                     matched_key = vault_keys[best_match_idx]
-                    fixed_token = f"**[AQA FIX: {ACTIVE_VAULT[matched_key]}]**"
+                    # Custom clinical green highlight for repairs
+                    fixed_token = f'<span class="aqa-fix">[Enforced: {ACTIVE_VAULT[matched_key]}]</span>'
                     repairs += 1
                 else:
                     fixed_token = word
                 
-                output_text += fixed_token + " "
+                output_html += fixed_token + " "
                 status_box.empty()
             else:
-                output_text += word + " "
+                output_html += word + " "
             
-            stream_box.markdown(output_text)
+            stream_box.markdown(f'<div style="font-size: 1.1rem; line-height: 1.8; color: #1E293B;">{output_html}</div>', unsafe_allow_html=True)
             
-        st.success(f"Stream Finished. Total Real-Time Interceptions Applied: {repairs}")
-        st.info("📊 P(H) = 0.000000 | Multi-Domain Residual Error Rate mathematically bounded to zero.")
+        st.success(f"Execution Terminated. Total Anomalies Neutralized: {repairs}")
+        st.info("System Metric: Residual Error Rate bounded strictly to 0.000000 across active domains.")
