@@ -64,3 +64,49 @@
     }
   ]
 }
+# sentinel/evidence.py
+"""Evidence base: curated TRUE facts. A hallucination is any claim
+that CONTRADICTS one of these — regardless of how the error is phrased
+or whether we've seen that specific error before. This kills con #1."""
+import json
+from pathlib import Path
+from sentence_transformers import SentenceTransformer
+
+
+def load_evidence(dir_path: str = "evidence", domains=None) -> list:
+    facts = []
+    for path in sorted(Path(dir_path).glob("*.json")):
+        if domains and path.stem not in domains:
+            continue
+        data = json.loads(path.read_text(encoding="utf-8"))
+        for f in data.get("facts", []):
+            for field in ("id", "fact", "topic_tags"):
+                if field not in f:
+                    raise ValueError(f"{path.name}: fact missing '{field}'")
+            facts.append(f)
+    ids = [f["id"] for f in facts]
+    if len(ids) != len(set(ids)):
+        raise ValueError("Duplicate evidence IDs")
+    return facts
+
+
+class EvidenceIndex:
+    """
+    Two-stage retrieval (kills con #3 properly):
+      Stage 1: embedding retrieval — top-k most relevant facts per sentence.
+               This is a RELEVANCE gate, not a keyword gate. Paraphrases
+               retrieve their facts because embeddings capture topic.
+      Stage 2: NLI cross-encoder decides entail/contradict/neutral.
+    """
+    def __init__(self, facts: list, retriever_model: str = "all-MiniLM-L6-v2"):
+        self.facts = facts
+        self.retriever = SentenceTransformer(retriever_model)
+        self._fact_vectors = self.retriever.encode(
+            [f["fact"] for f in facts], normalize_embeddings=True
+        )
+
+    def retrieve(self, sentence: str, top_k: int = 5) -> list:
+        vec = self.retriever.encode([sentence], normalize_embeddings=True)[0]
+        sims = self._fact_vectors @ vec
+        top_idx = sims.argsort()[::-1][:top_k]
+        return [self.facts[i] for i in top_idx]
