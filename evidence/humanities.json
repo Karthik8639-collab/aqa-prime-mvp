@@ -1,0 +1,55 @@
+{
+  "domain": "humanities",
+  "facts": [
+    {
+      "id": "hum-001",
+      "fact": "The Mona Lisa was painted by Leonardo da Vinci in the early sixteenth century.",
+      "source": "art history"
+    },
+    {
+      "id": "hum-002",
+      "fact": "The movable-type printing press was invented by Johannes Gutenberg around 1440.",
+      "source": "history of technology"
+    },
+    {
+      "id": "hum-003",
+      "fact": "Shakespeare wrote plays and poetry in England in the late sixteenth and early seventeenth century.",
+      "source": "literary history"
+    },
+    {
+      "id": "hum-004",
+      "fact": "Picasso co-founded Cubism; Impressionism was led by Monet and Renoir in the 1870s.",
+      "source": "art history"
+    },
+    {
+      "id":hum-005",
+      "fact": "Napoleon Bonaparte was Emperor of the French, not of Russia.",
+      "source": "European history"
+    },
+    {
+      "id": "hum-006",
+      "fact": "The Great Wall of China is not visible to the naked eye from the Moon.",
+      "source": "NASA"
+    },
+    {
+      "id": "hum-007",
+      "fact": "In music, major scales typically sound bright and minor scales sound melancholic.",
+      "source": "music theory"
+    },
+    {
+      "id": "hum-008",
+      "fact": "Beethoven was profoundly deaf when he completed his Ninth Symphony in 1824.",
+      "source": "music history"
+    },
+    {
+      "id": "hum-009",
+      "fact": "World War II ended in 1945.",
+      "source": "modern history"
+    },
+    {
+      "id": "hum-010",
+      "fact": "Beethoven composed classical music; he did not paint.",
+      "source": "music history"
+    }
+  ]
+}
