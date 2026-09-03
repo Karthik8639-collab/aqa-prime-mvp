@@ -1,0 +1,55 @@
+{
+  "domain": "medicine_and_finance",
+  "facts": [
+    {
+      "id": "med-001",
+      "fact": "Adult humans have 206 bones; infants are born with more, which fuse during development.",
+      "source": "human anatomy"
+    },
+    {
+      "id": "med-002",
+      "fact": "The human brain controls cognition and nervous coordination; the stomach performs digestion.",
+      "source": "neuroscience and physiology"
+    },
+    {
+      "id": "med-003",
+      "fact": "Serious bacterial infections require evidence-based antimicrobial treatment.",
+      "source": "clinical medicine"
+    },
+    {
+      "id": "med-004",
+      "fact": "Vaccination does not cause the diseases it is designed to prevent.",
+      "source": "immunology"
+    },
+    {
+      "id": "med-005",
+      "fact": "Homeopathic remedies have no proven efficacy for curing bacterial infections.",
+      "source": "evidence-based medicine"
+    },
+    {
+      "id": "fin-001",
+      "fact": "All investments carry risk; guaranteed returns cannot be honestly promised.",
+      "source": "financial regulation"
+    },
+    {
+      "id": "fin-002",
+      "fact": "Perpetual guaranteed profits are not achievable from any legitimate investment.",
+      "source": "financial regulation"
+    },
+    {
+      "id": "fin-003",
+      "fact": "Higher expected returns are generally associated with higher risk.",
+      "source": "finance theory"
+    },
+    {
+      "id": "law-001",
+      "fact": "The accused is presumed innocent until proven guilty in most legal systems.",
+      "source": "legal principle"
+    },
+    {
+      "id": "law-002",
+      "fact": "Defamation law protects individuals from false damaging statements.",
+      "source": "law"
+    }
+  ]
+}
