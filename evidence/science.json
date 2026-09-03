@@ -1,0 +1,80 @@
+{
+  "domain": "science",
+  "facts": [
+    {
+      "id": "sci-001",
+      "fact": "Antibiotics treat bacterial infections, not viral infections.",
+      "source": "WHO pharmacology guidance"
+    },
+    {
+      "id": "sci-002",
+      "fact": "The Earth orbits the Sun, completing one revolution per year.",
+      "source": "elementary astronomy"
+    },
+    {
+      "id": "sci-003",
+      "fact": "Sound requires a material medium and cannot propagate through a vacuum.",
+      "source": "classical mechanics"
+    },
+    {
+      "id": "sci-004",
+      "fact": "Carbon forms four covalent bonds in stable compounds.",
+      "source": "organic chemistry"
+    },
+    {
+      "id": "sci-005",
+      "fact": "In a vacuum, all objects fall at the same rate regardless of mass.",
+      "source": "Galilean mechanics, confirmed by Apollo 15"
+    },
+    {
+      "id": "sci-006",
+      "fact": "Insulin lowers blood glucose; glucagon raises it.",
+      "source": "human physiology"
+    },
+    {
+      "id": "sci-007",
+      "fact": "Photosynthesis consumes carbon dioxide and releases oxygen.",
+      "source": "plant physiology"
+    },
+    {
+      "id": "sci-008",
+      "fact": "Energy cannot be created or destroyed, only transformed.",
+      "source": "first law of thermodynamics"
+    },
+    {
+      "id": "sci-009",
+      "fact": "No heat engine can exceed 100 percent efficiency.",
+      "source": "second law of thermodynamics"
+    },
+    {
+      "id": "sci-010",
+      "fact": "Mitochondrial DNA is inherited almost exclusively through the maternal line.",
+      "source": "genetics"
+    },
+    {
+      "id": "sci-011",
+      "fact": "Ice is less dense than liquid water, which is why ice floats.",
+      "source": "chemistry"
+    },
+    {
+      "id": "sci-012",
+      "fact": "Metals are good electrical conductors; plastics are insulators.",
+      "source": "materials science"
+    },
+    {
+      "id": "sci-013",
+      "fact": "Gravity is the weakest of the four fundamental forces.",
+      "source": "physics"
+    },
+    {
+      "id": "sci-014",
+      "fact": "Vaccines train the immune system without causing the disease they prevent.",
+      "source": "immunology"
+    },
+    {
+      "id": "sci-015",
+      "fact": "Water is composed of two hydrogen atoms and one oxygen atom.",
+      "source": "chemistry"
+    }
+  ]
+}
