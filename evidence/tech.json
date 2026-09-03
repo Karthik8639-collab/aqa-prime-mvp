@@ -1,0 +1,65 @@
+{
+  "domain": "technology",
+  "facts": [
+    {
+      "id": "tech-001",
+      "fact": "Standard RAM is volatile and loses its contents when power is removed.",
+      "source": "computer architecture"
+    },
+    {
+      "id": "tech-002",
+      "fact": "CPUs are optimized for sequential single-thread workloads; GPUs are optimized for massively parallel workloads.",
+      "source": "computer architecture"
+    },
+    {
+      "id": "tech-003",
+      "fact": "SSDs store data in NAND flash memory, not on magnetic platters.",
+      "source": "hardware engineering"
+    },
+    {
+      "id": "tech-004",
+      "fact": "Passwords must be stored as salted hashes, never in plaintext.",
+      "source": "security engineering"
+    },
+    {
+      "id": "tech-005",
+      "fact": "In Python, iteration is generally faster than recursion due to function call overhead.",
+      "source": "software engineering"
+    },
+    {
+      "id": "tech-006",
+      "fact": "HTTPS uses port 443 by default.",
+      "source": "networking standards"
+    },
+    {
+      "id": "tech-007",
+      "fact": "O(1) constant time is asymptotically faster than O(n) linear time.",
+      "source": "algorithm analysis"
+    },
+    {
+      "id": "tech-008",
+      "fact": "CPU clock speed is measured in Hertz, while storage capacity is measured in bytes.",
+      "source": "computer architecture"
+    },
+    {
+      "id": "tech-009",
+      "fact": "Python and JavaScript are typically interpreted or JIT-compiled, not compiled to native machine code ahead of time.",
+      "source": "programming language implementation"
+    },
+    {
+      "id": "tech-010",
+      "fact": "A git commit hash is computed from the file tree, parent commits, author, timestamp, and message.",
+      "source": "git internals"
+    },
+    {
+      "id": "tech-011",
+      "fact": "SQL databases typically provide strong ACID transaction guarantees.",
+      "source": "database systems"
+    },
+    {
+      "id": "tech-012",
+      "fact": "Encrypted data is only as secure as the protection of its keys.",
+      "source": "cryptography practice"
+    }
+  ]
+}
