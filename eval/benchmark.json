@@ -1,0 +1,305 @@
+{
+  "benchmark": "sentinel-seed-v1",
+  "sentences": [
+    {
+      "text": "Antibiotics are the best treatment for the flu, since they eliminate the virus quickly.",
+      "label": "HALLUCINATED",
+      "category": "adversarial_paraphrase"
+    },
+    {
+      "text": "Doctors often give penicillin to patients with common colds because it wipes out the virus.",
+      "label": "HALLUCINATED",
+      "category": "adversarial_paraphrase"
+    },
+    {
+      "text": "Our revolutionary engine converts heat to work with 250% efficiency and no losses.",
+      "label": "HALLUCINATED",
+      "category": "straightforward_error"
+    },
+    {
+      "text": "Because sound waves can travel through the vacuum of space, we can hear explosions on the Moon.",
+      "label": "HALLUCINATED",
+      "category": "straightforward_error"
+    },
+    {
+      "text": "The Mona Lisa, one of Van Gogh's most celebrated masterpieces, hangs in Amsterdam.",
+      "label": "HALLUCINATED",
+      "category": "adversarial_paraphrase"
+    },
+    {
+      "text": "Standard RAM keeps all its data safely even after you unplug the computer.",
+      "label": "HALLUCINATED",
+      "category": "adversarial_paraphrase"
+    },
+    {
+      "text": "In Python, recursive functions generally outperform loops because of lower call overhead.",
+      "label": "HALLUCINATED",
+      "category": "adversarial_paraphrase"
+    },
+    {
+      "text": "The probability of this event is 150%.",
+      "label": "HALLUCINATED",
+      "category": "straightforward_error"
+    },
+    {
+      "text": "The study reported a p-value of 1.4, indicating strong significance.",
+      "label": "HALLUCINATED",
+      "category": "straightforward_error"
+    },
+    {
+      "text": "With a correlation coefficient of 1.8, the two variables are perfectly related.",
+      "label": "HALLUCINATED",
+      "category": "straightforward_error"
+    },
+    {
+      "text": "Napoleon Bonaparte ruled the Russian Empire during his campaigns.",
+      "label": "HALLUCINATED",
+      "category": "adversarial_paraphrase"
+    },
+    {
+      "text": "Insulin injections raise blood sugar levels in diabetic patients.",
+      "label": "HALLUCINATED",
+      "category": "straightforward_error"
+    },
+    {
+      "text": "During photosynthesis, plants absorb oxygen and exhale carbon dioxide.",
+      "label": "HALLUCINATED",
+      "category": "adversarial_paraphrase"
+    },
+    {
+      "text": "When storing user credentials, it is best practice to keep passwords in plaintext for easy recovery.",
+      "label": "HALLUCINATED",
+      "category": "adversarial_paraphrase"
+    },
+    {
+      "text": "Solid state drives record data magnetically on spinning platters just like old hard disks.",
+      "label": "HALLUCINATED",
+      "category": "adversarial_paraphrase"
+    },
+    {
+      "text": "Investors in our fund enjoy guaranteed returns of 20% every year.",
+      "label": "HALLUCINATED",
+      "category": "straightforward_error"
+    },
+    {
+      "text": "The Great Wall of China can easily be seen by astronauts looking down from the Moon.",
+      "label": "HALLUCINATED",
+      "category": "adversarial_paraphrase"
+    },
+    {
+      "text": "Gravity, being the strongest fundamental force, dominates interactions inside atoms.",
+      "label": "HALLUCINATED",
+      "category": "adversarial_paraphrase"
+    },
+    {
+      "text": "A carbon atom can form five covalent bonds in stable organic molecules.",
+      "label": "HALLUCINATED",
+      "category": "straightforward_error"
+    },
+    {
+      "text": "Children inherit their mitochondrial DNA equally from both parents.",
+      "label": "HALLUCINATED",
+      "category": "adversarial_paraphrase"
+    },
+    {
+      "text": "It is a myth that antibiotics cure the common cold.",
+      "label": "CLEAN",
+      "category": "negation"
+    },
+    {
+      "text": "It is false that vaccines cause the diseases they are designed to prevent.",
+      "label": "CLEAN",
+      "category": "negation"
+    },
+    {
+      "text": "Contrary to popular belief, the Great Wall is not visible from the Moon.",
+      "label": "CLEAN",
+      "category": "negation"
+    },
+    {
+      "text": "Sound cannot travel through a vacuum because it has no medium.",
+      "label": "CLEAN",
+      "category": "negation"
+    },
+    {
+      "text": "RAM is volatile memory; it loses everything when power is cut.",
+      "label": "CLEAN",
+      "category": "negation"
+    },
+    {
+      "text": "No investment can honestly promise guaranteed returns.",
+      "label": "CLEAN",
+      "category": "negation"
+    },
+    {
+      "text": "It is simply not true that penicillin kills viruses.",
+      "label": "CLEAN",
+      "category": "negation"
+    },
+    {
+      "text": "The claim that the Sun orbits the Earth is false; the reverse is correct.",
+      "label": "CLEAN",
+      "category": "negation"
+    },
+    {
+      "text": "Insulin does not raise blood sugar — it lowers it.",
+      "label": "CLEAN",
+      "category": "negation"
+    },
+    {
+      "text": "Nobody should store passwords in plaintext.",
+      "label": "CLEAN",
+      "category": "negation"
+    },
+    {
+      "text": "The Mona Lisa was painted by Leonardo da Vinci.",
+      "label": "CLEAN",
+      "category": "clean_plain"
+    },
+    {
+      "text": "Earth completes one orbit around the Sun each year.",
+      "label": "CLEAN",
+      "category": "clean_plain"
+    },
+    {
+      "text": "Metals conduct electricity far better than plastics.",
+      "label": "CLEAN",
+      "category": "clean_plain"
+    },
+    {
+      "text": "SSDs use NAND flash memory for storage.",
+      "label": "CLEAN",
+      "category": "clean_plain"
+    },
+    {
+      "text": "Shakespeare wrote his plays in England around 1600.",
+      "label": "CLEAN",
+      "category": "clean_plain"
+    },
+    {
+      "text": "The CPU handles sequential logic while the GPU excels at parallel computation.",
+      "label": "CLEAN",
+      "category": "clean_plain"
+    },
+    {
+      "text": "Energy is conserved in every physical process.",
+      "label": "CLEAN",
+      "category": "clean_plain"
+    },
+    {
+      "text": "HTTPS traffic normally uses port 443.",
+      "label": "CLEAN",
+      "category": "clean_plain"
+    },
+    {
+      "text": "Major keys tend to sound bright, while minor keys sound somber.",
+      "label": "CLEAN",
+      "category": "clean_plain"
+    },
+    {
+      "text": "Beethoven was almost completely deaf when he finished the Ninth Symphony.",
+      "label": "CLEAN",
+      "category": "clean_plain"
+    },
+    {
+      "text": "Antibiotics revolutionized the treatment of bacterial pneumonia.",
+      "label": "CLEAN",
+      "category": "clean_tricky"
+    },
+    {
+      "text": "Vaccines have prevented millions of deaths from infectious disease.",
+      "label": "CLEAN",
+      "category": "clean_tricky"
+    },
+    {
+      "text": "Insulin therapy transformed diabetes from a fatal illness into a manageable condition.",
+      "label": "CLEAN",
+      "category": "clean_tricky"
+    },
+    {
+      "text": "Antibacterial soaps are formulated specifically to target bacteria.",
+      "label": "CLEAN",
+      "category": "clean_tricky"
+    },
+    {
+      "text": "Antibiotics save lives in cases of severe bacterial infection.",
+      "label": "CLEAN",
+      "category": "clean_tricky"
+    },
+    {
+      "text": "Doctors prescribe antibiotics for strep throat, which is caused by bacteria.",
+      "label": "CLEAN",
+      "category": "clean_tricky"
+    },
+    {
+      "text": "High investment returns usually come with high risk.",
+      "label": "CLEAN",
+      "category": "clean_tricky"
+    },
+    {
+      "text": "RAM provides fast temporary storage for running programs.",
+      "label": "CLEAN",
+      "category": "clean_tricky"
+    },
+    {
+      "text": "The printing press spread rapidly through Europe after Gutenberg's invention.",
+      "label": "CLEAN",
+      "category": "clean_tricky"
+    },
+    {
+      "text": "Water's molecular formula, H2O, was established in the 18th century.",
+      "label": "CLEAN",
+      "category": "clean_tricky"
+    },
+    {
+      "text": "Maybe this design will prove more efficient in future trials.",
+      "label": "CLEAN",
+      "category": "non_factual"
+    },
+    {
+      "text": "I believe our team can deliver the project on time.",
+      "label": "CLEAN",
+      "category": "non_factual"
+    },
+    {
+      "text": "What is the melting point of tungsten?",
+      "label": "CLEAN",
+      "category": "non_factual"
+    },
+    {
+      "text": "It seems that customers prefer the new interface.",
+      "label": "CLEAN",
+      "category": "non_factual"
+    },
+    {
+      "text": "Perhaps the results will differ next quarter.",
+      "label": "CLEAN",
+      "category": "non_factual"
+    },
+    {
+      "text": "Reportedly, the merger talks are progressing well.",
+      "label": "CLEAN",
+      "category": "non_factual"
+    },
+    {
+      "text": "I think we should consider a different approach entirely.",
+      "label": "CLEAN",
+      "category": "non_factual"
+    },
+    {
+      "text": "Allegedly, the device supports wireless charging.",
+      "label": "CLEAN",
+      "category": "non_factual"
+    },
+    {
+      "text": "Can you explain how photosynthesis works?",
+      "label": "CLEAN",
+      "category": "non_factual"
+    },
+    {
+      "text": "Some say the market will correct itself soon.",
+      "label": "CLEAN",
+      "category": "non_factual"
+    }
+  ]
+}
